@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,7 +16,7 @@ header {
 .contenedor-videos {
   background-color: #525151; }
 
-.card iframe {
+.card iframe, .card .col .card, .col .card .card {
   min-height: 300px;
   min-width: 300px; }
 
@@ -30,10 +32,11 @@ body {
   color: #716309;
   font-size: xx-large; }
 
+.contenedor-videos {
+  padding: 10px; }
+
 .col .card {
-  min-width: auto; }
-  .col .card .col .card iframe {
-    min-width: auto; }
+  max-width: auto; }
 
 .dic-container {
   display: flex;
@@ -48,7 +51,7 @@ body {
 .foto-dic-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 0;
@@ -71,7 +74,7 @@ body {
   gap: 20px;
   padding: 10px 20px; }
 
-.movimientos iframe.i-movimientos {
+.movimientos iframe.i-movimientos, .movimientos .col .i-movimientos.card, .col .movimientos .i-movimientos.card {
   border: 1px solid #000;
   width: 600px;
   height: 600px;
@@ -121,7 +124,7 @@ form {
 .mapa-container {
   margin: 20px auto;
   padding: 10px 100px; }
-  .mapa-container iframe {
+  .mapa-container iframe, .mapa-container .col .card, .col .mapa-container .card {
     min-height: 300px;
     min-width: 100%; }
 
@@ -148,7 +151,10 @@ footer ul {
   gap: 0;
   list-style: none;
   font-size: x-large;
-  font-weight: bold; }
+  font-weight: bold;
+  transition: all .5s ease-in; }
+  footer ul li.footer__icono a.footer__link i:is(:hover, :focus-visible) {
+    color: #fff; }
 
 @media (max-width: 320px) {
   body {
@@ -163,7 +169,7 @@ footer ul {
     justify-content: center;
     align-items: center;
     gap: 10px; }
-    .contenedor-videos .card iframe {
+    .contenedor-videos .card iframe, .contenedor-videos .card .col .card, .col .contenedor-videos .card .card {
       min-height: 250px;
       min-width: 100%; }
   .info-container .info-crossfit {
@@ -193,7 +199,7 @@ footer ul {
   .movimientos {
     padding-inline: 5px;
     margin-bottom: 20px; }
-    .movimientos iframe {
+    .movimientos iframe, .movimientos .col .card, .col .movimientos .card {
       min-height: 250px;
       min-width: 100%; }
   .contenedor-baner-footer {
@@ -245,7 +251,7 @@ footer ul {
     justify-content: center;
     align-items: center;
     gap: 10px; }
-    .contenedor-videos .card iframe {
+    .contenedor-videos .card iframe, .contenedor-videos .card .col .card, .col .contenedor-videos .card .card {
       min-height: 250px;
       min-width: 100%; }
   .info-container .info-crossfit {
@@ -275,7 +281,7 @@ footer ul {
   .movimientos {
     padding-inline: 5px;
     margin-bottom: 20px; }
-    .movimientos iframe {
+    .movimientos iframe, .movimientos .col .card, .col .movimientos .card {
       min-height: 250px;
       min-width: 100%; }
   .contenedor-baner-footer {
@@ -332,7 +338,7 @@ footer ul {
     justify-content: center;
     align-items: center;
     gap: 10px; }
-    .contenedor-videos .card iframe {
+    .contenedor-videos .card iframe, .contenedor-videos .card .col .card, .col .contenedor-videos .card .card {
       min-height: 250px;
       min-width: 100%; }
   .info-container .info-crossfit {
@@ -362,7 +368,7 @@ footer ul {
   .movimientos {
     padding-inline: 5px;
     margin-bottom: 20px; }
-    .movimientos iframe {
+    .movimientos iframe, .movimientos .col .card, .col .movimientos .card {
       min-height: 250px;
       min-width: 100%; }
   .contenedor-baner-footer {
@@ -417,7 +423,7 @@ footer ul {
     justify-content: center;
     align-items: center;
     gap: 10px; }
-    .contenedor-videos .card iframe {
+    .contenedor-videos .card iframe, .contenedor-videos .card .col .card, .col .contenedor-videos .card .card {
       min-height: 250px;
       min-width: 100%; }
   .info-container .info-crossfit {
@@ -453,7 +459,7 @@ footer ul {
   .movimientos {
     padding-inline: 5px;
     margin-bottom: 20px; }
-    .movimientos iframe {
+    .movimientos iframe, .movimientos .col .card, .col .movimientos .card {
       min-height: 250px;
       min-width: 100%; }
   .contenedor-baner-footer {
@@ -478,7 +484,7 @@ footer ul {
   .mapa-container {
     margin: 20px auto;
     padding: 10px 100px; }
-    .mapa-container iframe {
+    .mapa-container iframe, .mapa-container .col .card, .col .mapa-container .card {
       min-height: 300px;
       min-width: 100%; }
   footer ul {

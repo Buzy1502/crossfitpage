@@ -12,12 +12,13 @@ body {
     font-size: xx-large;
 }
 
-.col .card {
-    min-width: auto;
+.contenedor-videos {
+    padding: 10px;
+}
 
-    .col .card iframe {
-        min-width: auto;
-    }
+.col .card {
+    max-width: auto;
+    @extend iframe;
 }
 
 .dic-container {
@@ -43,7 +44,6 @@ body {
 
 .movimientos {
     @include flex (row, wrap, center, center, 20px);
-    // row-gap: 20px;
     padding: 10px 20px;
 }
 

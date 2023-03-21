@@ -18,5 +18,10 @@ footer ul {
     @include flex(row, wrap, space-around,center,0);
     list-style: none;
     font-size: x-large;
-    font-weight: bold;   
+    font-weight: bold;
+    transition: all .5s ease-in;
+    
+    li.footer__icono a.footer__link i:is(:hover, :focus-visible) {
+        color: #fff;
+    }
 }
